@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+		<title>Jetzt kostenlos Angebot erhalten.</title>
+
+		<link rel="icon" href="./image/logo.svg" type="image/png">
+
+	<style>
+		body {
+			background-color: white;
+			font-family: "Roboto", sans-serif;
+			text-align: center;
+			background-color: #f8f8f8;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #f8f8f8;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			/* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
+            border-radius: 5px;
+            /* text-align: center; */
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #a3a3a3;
+			border-radius: 1px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+            border-radius: 5px;
+		}
+
+		/* Styling Button */
+		button {
+            text-align: center;
+			background-color: #00BFF5;
+			border: 1px solid #d4d4d4;
+			border-radius: 5px;
+			font-family: inherit;
+			font-size: 16px;
+            padding: 15px;
+			display: block;
+			width: 70%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+            color: white;
+			margin-left: 14%;
+		}
+
+		button:hover{
+			background-color: #0080a4;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Jetzt kostenlos Angebot erhalten</h1>
+
+	<br><p>Zurück zur Startseite <a href="index.html">http://www.sicheranlegen.eu/</a></p>
+
+	<!-- Create Form -->
+	<form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAj_1FbS5OkkpcI60jh7bAn9tSzmv04Se-yE_Qkqj0M22D6w/formResponse" method="post">
+
+        <!-- Details -->
+        <div class="form-control">
+			<input type="text" id="first-name" name="entry.999962629" required placeholder="Vorname *" />
+		</div>
+		
+		<div class="form-control">
+			<input type="text" id="last-name" name="entry.1586896230" required placeholder="Name *" />
+		</div>
+		
+		<div class="form-control">
+			<input type="email" id="email" name="entry.1754409527" required placeholder="E-mail *" />
+		</div>
+		
+		<div class="form-control">
+			<input type="text" id="country-code" name="entry.58679122" required placeholder="Ländervorwahl *" />
+		</div>
+		
+		<div class="form-control">
+			<input type="text" id="phone" name="entry.1821318904" required placeholder="Telefon *" />
+		</div>
+		
+        
+        <div>
+            <!--<p style="font-size: 14px; text-align: left;">* Diese Felder müssen ausgefüllt werden.<br><br><br>-->
+            <p style="font-size: 14px; text-align: left;">* Pflichtfeld<br><br><br>
+        </div>
+
+        <div class="form-control">
+            <label for="role">Unverbindliche Anlagesumme</label>
+            <select name="entry.2085942897" id="role">
+                <option value="Mehr Optionen">Optionen</option>
+                <option value="10 000 - 50 000 EUR">10 000 - 50 000 EUR</option>
+                <option value="50 000 - 100 000 EUR">50 000 - 100 000 EUR</option>
+                <option value="Höher">höher</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="role">Unverbindliche Laufzeit</label>
+            <select name="entry.1415544793" id="role">
+                <option value="Mehr Optionen">Optionen</option>
+                <option value="Bis 12 Monate">bis 12 Monate</option>
+                <option value="Bis 24 Monate">bis 24 Monate</option>
+                <option value="Länger">länger</option>
+            </select>
+        </div>
+
+        <div>
+            <!--<p style="text-align: left;">Die erbetenen Angaben werden zur Bearbeitung Ihrer Anfragen benötigt. Die Zusendung der Vergleichsangebote ist kosten- und gebührenfrei.</p>-->
+            <br><p>Die erbetenen Angaben werden zur Bearbeitung Ihrer Anfragen benötigt. Die Zusendung der Vergleichsangebote ist kosten- und gebührenfrei.</p>
+        </div>
+
+        <button type="submit" onclick="submitForm(event)">
+			Jetzt Angebot anfordern
+		</button>
+	</form>
+	
+	<script>
+		function submitForm(event) {
+			var firstName = document.getElementById('first-name').value;
+			var lastName = document.getElementById('last-name').value;
+			var email = document.getElementById('email').value;
+			var countryCode = document.getElementById('country-code').value;
+			var phone = document.getElementById('phone').value;
+
+	
+			if (firstName === '' || lastName === '' || email === '' || countryCode == '' || phone == '') {
+				alert('Bitte füllen Sie alle erforderlichen Felder aus.');
+			} else {
+				document.getElementById('form').submit();
+
+				// alert('Das Formular wurde erfolgreich gesendet');
+				alert('Das Formular wurde erfolgreich gesendet\n\nKlicken Sie auf „OK“, um zur Hauptseite zurückzukehren');
+				
+				
+				setTimeout(function () {
+					window.location.href = "http://www.sicheranlegen.eu/index.html";
+				}, 500);
+			}
+		}
+	</script>
+	
+
+
+
+	
+</body>
+</html>
