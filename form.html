@@ -138,10 +138,11 @@
         <div>
             <br><p>Die erbetenen Angaben werden zur Bearbeitung Ihrer Anfragen benötigt. Die Zusendung der Vergleichsangebote ist kosten- und gebührenfrei.</p>
         </div>
-
+        <a href="thanks-page.html" style="text-decoration: none;">
         <button type="button" onclick="submitForm()">
             Jetzt Angebot anfordern
         </button>
+        </a>
     </form>
 
     <script>
@@ -186,6 +187,7 @@
             .then(data => {
                 console.log('Message sent:', data);
                 alert('Das Formular wurde erfolgreich gesendet');
+                window.location.href = 'thanks-page.html';
             })
             .catch(error => {
                 console.error('Error sending message:', error);
